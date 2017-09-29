@@ -1,0 +1,347 @@
+
+API Credentials
+
+Before you get started, you should have the API KEY and API SECRET. 
+
+You can use development keys provided below for testing/development of the API.
+
+These credentials must be presented as http headers with evert api call.
+
+
+API Headears
+
+Header Name             Header Value                Required
+
+Accept                  application/json                YES
+Content-Type            application/json                YES
+Accept                  application/vnd.flingoo.v1      YES
+X-API-KEY               api key                         YES
+X-API-SECRET            api secret                      YES
+X-AUTH-TOKE             endpoints marked as             Optional
+
+auth_token value will be available after a successful registration or sign in. 
+Client apps can use this token to access any api endpoint marked as authentication required.
+In case, if the auth token invalid, client apps must re-sign in to the api and receive the newest token for 
+any given user
+
+
+
+
+API Endpoints
+
+Api endpoint domain urls are as follows
+
+Environment                                     Domain
+Staging                                     http://flingoo-api.herokuapps.com
+Production                                  TBC
+
+
+
+
+
+Test Users
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Username                                       Password
+
+TestUser001@gmail.com                           qwrety                  Abc Deghijklm           Male
+TestUser002@yahoo.com                           qwrety                  Def Hijklmnop           Female
+TestUser003@freeemail.com                       qwrety                  Ehi Jklmnopq            Male
+TestUser004@hotmail.com                         qwrety                  Hij Klmnopqwr           Female
+TestUser005@live.com                            qwrety                  Bcd Efghijklm           Male
+TestUser006@slt.lk                              qwrety                  Ijk gtwqfi              Female
+TestUser007@google.com                          qwrety                  Jkl asbhfdiuqg          Male
+TestUser008@yahoo.com                           qwrety                  Klm qwuygfdv            Female
+TestUser009@rocketmail.com                      qwrety                  Lmn qwigdib             Male
+TestUser0010@test.com                           qwrety                  Mno wtigdiusd           Female
+
+
+
+
+
+
+
+
+
+
+Start   ---------->       ---------------------------------------------------------------------------------------------------------
+                          |      Log In with FaceBook        |        Register with E-Mail        |        Sign In Now           |
+
+                          |----------------------------------|------------------------------------|------------------------------|
+                          
+                          |                                  |                                    |                              |
+                          
+                          |                                  |                                    |                              |
+                          
+                          |                                  |                                    |                              |
+                          
+                          |                                  |                                    |                              |
+                          
+                          |                                  |                                    |                              |
+                          
+                          |                                  |                                    |                              |
+                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100 - look for men
+101 - look for women
+102 - both
+
+103 - who are looking Men
+104 - who are looking for women
+105 -  who are looking for both
+
+106 - looking for chat
+107 - looking for flirt & date
+108 - meet new people
+
+109 - only new members
+110 - online
+111 - only members with photo
+112 - only verified members
+
+search radius
+-> searchRadiusSlider
+
+ranger slider
+-> rangeSlider
+
+
+
+
+
+
+
+
+
+
+
+
+QA ------------ ------------ ------------ ------------ ------------ ------------ ------------ ------------ ------------ ------------ ------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Invitation Code
+
+Notifications
+
+Blocked People
+
+Help
+
+About US
+
+
+
+
+
+
+
+
+
+
+            __block BaseViewController *baseViewController = self;
+            
+            [self.overiVwViewController setCommunicator:^(NSDictionary *dict){
+                
+                NSLog(@"LOG: %@", dict);
+                NSString *command = [dict objectForKey:RemoteAction];
+                
+                if(command){
+                    
+                    if([command isEqualToString:kRemoteActionMyProfileDetails]){
+                        
+                        [baseViewController showMyProfileDetailViewController:YES param:(NSDictionary *)[dict objectForKey:@"ClickAction"]];
+                        
+                    }else if ([command isEqualToString:kRemoteActionMyProfilePhotoGallery]){
+                        
+                        NSDictionary *actionDic = [dict objectForKey:@"info"];
+                        [baseViewController showMyProfilePhotoGalleryViewController:YES param:actionDic];
+                        
+                    }else if([command isEqualToString:kRemoteActionShowProfileVisitors]){
+                        
+                        [baseViewController showProfileVisitorsViewController:YES];
+                        [baseViewController showMyProfileViewController:NO];
+                        
+                    }else if([command isEqualToString:kRemoteActionShowProfile]){
+                        [baseViewController showProfileViewCOntroller:YES param:(NSDictionary *)[dict objectForKey:@"ClickAction"]];
+                        [baseViewController showMyProfileViewController:NO];
+                    
+                    }
+                }
+                
+                NSString *navigationTitle = [dict objectForKey:RemoteNavigationTitleUpdate];
+                if(navigationTitle){
+                    [[baseViewController rightPanelViewController] setRightPanelTitle:navigationTitle];
+                }
+                
+            }];
+
+
+
+
+
+
+
+
+
+
+
+
+//////////  Chat Bubble
+
+Dragging
+        -> Add Delete Panel if its not visible
+
+Release
+        -> When releasing, check chat bubble is on delete panel
+        -> If not, hide chat buble
+        
+        
+        
+window.bounds
+
+view.frame
+
+x+ = bounds.size.height - view.frame.size.height
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+show back button
+    NSDictionary *dict = @{RemoteAction:kShowRightBackButton};
+    self.communicator(dict);
+
+    
+    
+
+add back support for view controller
+
+    if(IS_IPAD){
+        __block FLSettingsViewController *settings = self;
+        
+        [inviation setCommunicator:^(NSDictionary *dict){
+            NSString *command = [dict objectForKey:RemoteAction];
+            if([command isEqualToString:kHideRightBackButton]){
+                NSDictionary *dict = @{RemoteAction:kHideRightBackButton};
+                settings.communicator(dict);
+            }
+        }];
+    }
+    
+ 
+ add back button listener
+    if(IS_IPAD){
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goBack) name:@"GLOBAL_BACK_BUTTON_PRESSED" object:nil];
+    }
+    
+
+backbutton
+
+-(void) goBack
+{
+    if(IS_IPAD){
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"GLOBAL_BACK_BUTTON_PRESSED" object:nil];
+        NSDictionary *dict = @{RemoteAction:kHideRightBackButton};
+        self.communicator(dict);
+    }
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}

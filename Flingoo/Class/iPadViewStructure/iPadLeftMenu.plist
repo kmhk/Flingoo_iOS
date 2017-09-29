@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>list</key>
+		<array/>
+		<key>name</key>
+		<string>TopCell</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Find People</string>
+		<key>list</key>
+		<array>
+			<string>Near By</string>
+			<string>Advanced Search</string>
+			<string>Eye Catcher</string>
+		</array>
+	</dict>
+	<dict>
+		<key>list</key>
+		<array>
+			<string>Do You Like?</string>
+			<string>Matches</string>
+			<string>Like You</string>
+		</array>
+		<key>name</key>
+		<string>Match</string>
+	</dict>
+	<dict>
+		<key>list</key>
+		<array/>
+		<key>name</key>
+		<string>Live Radar</string>
+	</dict>
+	<dict>
+		<key>list</key>
+		<array/>
+		<key>name</key>
+		<string>Stay in Touch</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chat</string>
+		<key>list</key>
+		<array>
+			<string>My Chats</string>
+			<string>Requests</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Profile Visitors</string>
+		<key>list</key>
+		<array>
+			<string>Visitors</string>
+			<string>Visits</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Favourites</string>
+		<key>list</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Contacts</string>
+		<key>list</key>
+		<array>
+			<string>Friends</string>
+			<string>Requests </string>
+			<string>Unfriended</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Notifications</string>
+		<key>list</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Find Me</string>
+		<key>list</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Settings</string>
+		<key>list</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sign Out</string>
+		<key>list</key>
+		<array/>
+	</dict>
+</array>
+</plist>

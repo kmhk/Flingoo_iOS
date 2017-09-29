@@ -1,0 +1,69 @@
+/* 
+  Localizable.strings
+  Flingoo
+
+  Created by Prasad De Zoysa on 11/30/13.
+  Copyright (c) 2013 Copyright (c) 2013 SmartDevelopments - http://www.prasad.ws. All rights reserved.
+*/
+
+//alert common
+"error"                                     =   "Error";
+"oops"                                      =   "Oops";
+"ok"                                        =   "Ok";
+"unknown_error"                             =   "Unknown Error";
+"alert"                                     =   "Alert";
+"success"                                   =   "Success";
+"dismiss"                                   =   "Dismiss";
+"no"                                        =   "No";
+"yes"                                       =   "Yes";
+"cancel"                                    =   "Cancel";
+
+"flingoo"                                   =   "Flingoo";
+
+//Alert messages
+"grp_name_missing"                          =   "Please give a name to your group";
+"grp_desc_missing"                          =   "Say something about your group";
+"grp_success"                               =   "Group created";
+"grp_update_success"                        =   "Group updated";
+"meeting_name_missing"                      =   "Please give a name to your meeting";
+"meeting_desc_missing"                      =   "Say something about your meeting";
+"meeting_success"                           =   "Meeting created";
+"cancel_group"                              =   "Do you want to discard this group?";
+"discard"                                   =   "Discard";
+"cancel_meeting"                            =   "Do you want to discard this meeting?";
+"meeting_conform_title"                     =   "Meet Point Confirmation";
+"confirm_location"                          =   "Use this position to create a meeting point?";
+"invalid_destination"                       =   "Selected destination is not valid, Please try correct location to route";
+"start_time_missing"                        =   "Please set a start time";
+"seats_missing"                             =   "Please select the number of seats available";
+"start_point_missing"                       =   "Please select start point";
+"destination_point_missing"                 =   "Please select the end point";
+"taxi_creating"                             =   "Creating Taxi Point...";
+"taxi_success"                              =   "Taxi Point Created";
+
+//signin
+"faceBook_not_configured"                   =   "FaceBook not configured";
+"faceBook_access_denied"                    =   "FaceBook access denied!";
+"turn_on_the_facebook"                      =   "Please turn on the Facebook acess for Flingoo in Privacy section.";
+
+// Webservice Api
+"no_internet_connection"                    =   "No internet connection";
+
+//Add Friends
+"failed_to_send_sms"                        =   "Failed to send SMS!";
+"your_device_doesnt_sms"                    =   "Your device doesn't support SMS!";
+"invite_text_clopied"                       =   "The Invite text clopied to your clipboard";
+
+//Like You
+"paymeny_required"                          =   "Paymeny Required";
+"pay_credits_see_liked_you"                 =   "Pay 25 Credits to see who liked you ?";
+
+//My chat
+"now_what"                                  =   "Now What";
+
+//Radar
+"failed_get_your_location"                  =   "Failed to Get Your Location";
+
+//slider view
+"log_off"                                   =   "Do you really want to log off?";
+"sign_out"                                  =   "Sign out";
